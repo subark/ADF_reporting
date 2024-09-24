@@ -1,0 +1,9 @@
+{
+	"name": "vr-adf-sr",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "623c1382-63a8-4f82-aba0-1b7244e722fb",
+		"tenantId": "3ffdd76d-e4fc-4fc6-b8e4-a9145a295f97"
+	}
+}
