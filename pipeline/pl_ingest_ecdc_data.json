@@ -61,11 +61,7 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": [
-								{
-									"name": ""
-								}
-							],
+							"userProperties": [],
 							"typeProperties": {
 								"source": {
 									"type": "DelimitedTextSource",
@@ -101,26 +97,13 @@
 							"inputs": [
 								{
 									"referenceName": "ds_ecdc_raw_csv_http",
-									"type": "DatasetReference",
-									"parameters": {
-										"sourceRelativeURL": {
-											"value": "@item().sourceRelativeURL",
-											"type": "Expression"
-										},
-										"sourceBaseURL": "@item().sourceBaseURL"
-									}
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
 								{
 									"referenceName": "ds_ecdc_raw_csv_dl",
-									"type": "DatasetReference",
-									"parameters": {
-										"fileName": {
-											"value": "@item().sinkFileName",
-											"type": "Expression"
-										}
-									}
+									"type": "DatasetReference"
 								}
 							]
 						}
