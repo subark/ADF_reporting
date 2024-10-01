@@ -17,12 +17,10 @@
 		},
 		"parameters": {
 			"sourceRelativeURL": {
-				"type": "string",
-				"defaultValue": "cloudboxacademy/covid19/blob/main/ecdc_data/"
+				"type": "string"
 			},
 			"sourceBaseURL": {
-				"type": "string",
-				"defaultValue": "https://rawgithubusercontent/"
+				"type": "string"
 			}
 		},
 		"annotations": [],
@@ -38,7 +36,7 @@
 			"columnDelimiter": ",",
 			"rowDelimiter": "\n",
 			"escapeChar": "\\",
-			"firstRowAsHeader": false,
+			"firstRowAsHeader": true,
 			"quoteChar": null
 		},
 		"schema": []
