@@ -1,0 +1,17 @@
+{
+	"name": "tr_ingest_pop_data",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/population/blobs/population_by_age.tsv.gz",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/8e21d538-67e2-42de-a58a-e13d842f8a70/resourceGroups/vr-deltaRG/providers/Microsoft.Storage/storageAccounts/reportingsasr",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
