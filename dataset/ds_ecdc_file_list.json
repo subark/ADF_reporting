@@ -1,5 +1,5 @@
 {
-	"name": "Json1",
+	"name": "ds_ecdc_file_list",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "reportingBlobStorage",

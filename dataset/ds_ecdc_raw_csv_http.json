@@ -1,9 +1,19 @@
 {
-	"name": "http_copy",
+	"name": "ds_ecdc_raw_csv_http",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "http_opendata_ecdc_europe",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"sourceBaseURL": {
+					"value": "@dataset().sourceBaseURL",
+					"type": "Expression"
+				},
+				"sourceRelativeURL": {
+					"value": "@dataset().sourceRelativeURL",
+					"type": "Expression"
+				}
+			}
 		},
 		"parameters": {
 			"sourceRelativeURL": {
@@ -21,7 +31,7 @@
 			"location": {
 				"type": "HttpServerLocation",
 				"relativeUrl": {
-					"value": "@dataset().relativeURL",
+					"value": "@dataset().sourceRelativeURL",
 					"type": "Expression"
 				}
 			},

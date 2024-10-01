@@ -27,7 +27,7 @@
 						}
 					},
 					"dataset": {
-						"referenceName": "Json1",
+						"referenceName": "ds_ecdc_file_list",
 						"type": "DatasetReference"
 					}
 				}
@@ -100,7 +100,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "http_copy",
+									"referenceName": "ds_ecdc_raw_csv_http",
 									"type": "DatasetReference",
 									"parameters": {
 										"sourceRelativeURL": {
@@ -113,7 +113,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_ecdc_raw_csv_http",
+									"referenceName": "ds_ecdc_raw_csv_dl",
 									"type": "DatasetReference",
 									"parameters": {
 										"fileName": {
