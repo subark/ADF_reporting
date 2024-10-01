@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "vr-adf-sr"
+		},
+		"reportingBlobStorage_connectionString": {
+			"value": ""
+		},
+		"reportingDataLakeStorage_accountKey": {
+			"value": ""
+		},
+		"reportingDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://transportstoragesr.dfs.core.windows.net/"
+		},
+		"tr_ingest_pop_data_properties_typeProperties_scope": {
+			"value": "/subscriptions/8e21d538-67e2-42de-a58a-e13d842f8a70/resourceGroups/vr-deltaRG/providers/Microsoft.Storage/storageAccounts/reportingsasr"
+		}
+	}
+}
