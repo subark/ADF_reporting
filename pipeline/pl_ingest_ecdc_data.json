@@ -103,11 +103,11 @@
 									"referenceName": "http_copy",
 									"type": "DatasetReference",
 									"parameters": {
-										"relativeURL": {
+										"sourceRelativeURL": {
 											"value": "@item().sourceRelativeURL",
 											"type": "Expression"
 										},
-										"baseURL": "@item().sourceBaseURL"
+										"sourceBaseURL": "@item().sourceBaseURL"
 									}
 								}
 							],

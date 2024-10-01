@@ -6,11 +6,11 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"relativeURL": {
+			"sourceRelativeURL": {
 				"type": "string",
 				"defaultValue": "cloudboxacademy/covid19/blob/main/ecdc_data/"
 			},
-			"baseURL": {
+			"sourceBaseURL": {
 				"type": "string",
 				"defaultValue": "https://rawgithubusercontent/"
 			}
