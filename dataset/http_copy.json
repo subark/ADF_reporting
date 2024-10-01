@@ -9,6 +9,10 @@
 			"relativeURL": {
 				"type": "string",
 				"defaultValue": "cloudboxacademy/covid19/blob/main/ecdc_data/"
+			},
+			"baseURL": {
+				"type": "string",
+				"defaultValue": "https://rawgithubusercontent/"
 			}
 		},
 		"annotations": [],

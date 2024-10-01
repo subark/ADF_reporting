@@ -1,5 +1,5 @@
 {
-	"name": "ds_cases_death_raw_csv",
+	"name": "ds_ecdc_raw_csv_http",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "reportingDataLakeStorage",
@@ -7,8 +7,7 @@
 		},
 		"parameters": {
 			"fileName": {
-				"type": "string",
-				"defaultValue": "cases_death.csv"
+				"type": "string"
 			}
 		},
 		"annotations": [],
