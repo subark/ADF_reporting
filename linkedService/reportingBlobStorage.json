@@ -1,0 +1,12 @@
+{
+	"name": "reportingBlobStorage",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"connectionString": "DefaultEndpointsProtocol=https;AccountName=reportingsasr;EndpointSuffix=core.windows.net;",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDBDQUQ4NzUxLUMyQTctNDkwOC1CRUU0LTEzOTBGNjkzMkE3Nl9iMzFkOGMzMS0xZGRkLTQ2NDYtYWMwZS00M2JkZDU4Yjc1N2IiDQp9"
+		}
+	}
+}
