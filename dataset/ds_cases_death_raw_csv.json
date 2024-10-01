@@ -2,15 +2,26 @@
 	"name": "ds_cases_death_raw_csv",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "http_opendata_ecdc_europe",
+			"referenceName": "reportingDataLakeStorage",
 			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"fileName": {
+				"type": "string",
+				"defaultValue": "cases_death.csv"
+			}
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation",
-				"relativeUrl": "cloudboxacademy/covid19/main/ecdc_data/cases_deaths.csv"
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().fileName",
+					"type": "Expression"
+				},
+				"folderPath": "ecdc",
+				"fileSystem": "raw"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
