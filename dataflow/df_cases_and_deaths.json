@@ -3,13 +3,62 @@
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
-			"sources": [],
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_raw_cases_and_deaths",
+						"type": "DatasetReference"
+					},
+					"name": "CasesAndDeathsSource",
+					"description": "import data from ds_raw_cases_and_deaths"
+				}
+			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "filterEuropeOnly"
+				},
+				{
+					"name": "SelectOnlyRequiredfields",
+					"description": "dropped continent, rate_14 columns and added reported date column"
+				},
+				{
+					"name": "PivotCounts",
+					"description": "Pivots row values into columns-daily_count and indicator rows are turned to cases_count and death_count cols"
+				}
+			],
 			"scriptLines": [
 				"parameters{",
 				"     parameter1 as string",
-				"}"
+				"}",
+				"source(output(",
+				"          country as string,",
+				"          country_code as string,",
+				"          continent as string,",
+				"          population as string,",
+				"          indicator as string,",
+				"          daily_count as string,",
+				"          date as string,",
+				"          rate_14_day as string,",
+				"          source as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> CasesAndDeathsSource",
+				"CasesAndDeathsSource filter(continent == \"Europe\" && not(isNull(country_code))) ~> filterEuropeOnly",
+				"filterEuropeOnly select(mapColumn(",
+				"          country,",
+				"          country_code,",
+				"          population,",
+				"          indicator,",
+				"          daily_count,",
+				"          source",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> SelectOnlyRequiredfields",
+				"SelectOnlyRequiredfields pivot(pivotBy(daily_count, ['cases_count']),",
+				"     columnNaming: '$V$N',",
+				"     lateral: true) ~> PivotCounts"
 			]
 		}
 	}
