@@ -11,6 +11,9 @@
 		"reportingDataLakeStorage_accountKey": {
 			"value": ""
 		},
+		"http_opendata_ecdc_europe_properties_typeProperties_url": {
+			"value": "@{linkedService().sourceBaseURL}"
+		},
 		"reportingDataLakeStorage_properties_typeProperties_url": {
 			"value": "https://transportstoragesr.dfs.core.windows.net/"
 		},

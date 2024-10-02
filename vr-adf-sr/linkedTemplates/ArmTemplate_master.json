@@ -15,6 +15,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'reportingDataLakeStorage'"
 		},
+		"http_opendata_ecdc_europe_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "@{linkedService().sourceBaseURL}"
+		},
 		"reportingDataLakeStorage_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://transportstoragesr.dfs.core.windows.net/"
@@ -55,6 +59,9 @@
 					},
 					"reportingDataLakeStorage_accountKey": {
 						"value": "[parameters('reportingDataLakeStorage_accountKey')]"
+					},
+					"http_opendata_ecdc_europe_properties_typeProperties_url": {
+						"value": "[parameters('http_opendata_ecdc_europe_properties_typeProperties_url')]"
 					},
 					"reportingDataLakeStorage_properties_typeProperties_url": {
 						"value": "[parameters('reportingDataLakeStorage_properties_typeProperties_url')]"
