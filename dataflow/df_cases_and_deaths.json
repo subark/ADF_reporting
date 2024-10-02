@@ -50,9 +50,6 @@
 				}
 			],
 			"scriptLines": [
-				"parameters{",
-				"     parameter1 as string",
-				"}",
 				"source(output(",
 				"          country as string,",
 				"          country_code as string,",
@@ -86,7 +83,7 @@
 				"          daily_count,",
 				"          source,",
 				"          each(match(name=='date'),",
-				"               'reported' + '_date' = $$)",
+				"               'reported'+'_date' = $$)",
 				"     ),",
 				"     skipDuplicateMapInputs: false,",
 				"     skipDuplicateMapOutputs: false) ~> SelectOnlyRequiredfields",
