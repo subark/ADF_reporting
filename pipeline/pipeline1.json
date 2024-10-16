@@ -24,7 +24,14 @@
 						"referenceName": "SSISintegrationRuntime",
 						"type": "IntegrationRuntimeReference"
 					},
-					"loggingLevel": "Basic"
+					"loggingLevel": "Basic",
+					"projectConnectionManagers": {
+						"Sample Flat File Source Data": {
+							"ConnectionString": {
+								"value": "https://reportingsasr.file.core.windows.net/flatfile/SampleCurrencyData.txt"
+							}
+						}
+					}
 				}
 			}
 		],
